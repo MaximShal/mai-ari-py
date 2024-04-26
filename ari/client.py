@@ -7,7 +7,10 @@
 
 import json
 import logging
-import urlparse
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 import swaggerpy.client
 
 from ari.model import *

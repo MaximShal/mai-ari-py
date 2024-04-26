@@ -7,7 +7,10 @@
 
 import ari.client
 import swaggerpy.http_client
-import urlparse
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 Client = client.Client
 
